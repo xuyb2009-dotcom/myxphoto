@@ -12,3 +12,9 @@ __pycache__/
 # 系统文件
 .DS_Store
 Thumbs.db
+
+# 本地工具脚本（无需发布到网站）
+publish.sh
+一键发布.bat
+update_images.py
+setup_github.sh
