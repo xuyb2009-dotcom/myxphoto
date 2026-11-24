@@ -1,0 +1,14 @@
+# 临时 / 备份文件
+*.bak
+_test*.html
+_v_*.png
+_preview*.png
+*.tmp
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+Thumbs.db

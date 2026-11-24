@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyX · 个人摄影作品集</title>
+  <meta name="description" content="个人摄影作品展示，涵盖人像、风光、建筑、人文四大题材。光影之间，记录值得停留的瞬间。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 加载遮罩 -->
+  <div class="loader" id="loader">
+    <div class="loader__mark">My<span class="loader__x">X</span></div>
+  </div>
+
+  <!-- 顶部导航 -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="返回首页">
+      <span class="brand__mark"><span id="brandMain">My</span><span class="brand__x" id="brandX">X</span></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#works" class="nav__link">作品</a>
+      <a href="#about" class="nav__link">关于</a>
+      <a href="#contact" class="nav__link">联系</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#works" class="mobile-menu__link">作品</a>
+    <a href="#about" class="mobile-menu__link">关于</a>
+    <a href="#contact" class="mobile-menu__link">联系</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ========== Hero 轮播 ========== -->
+    <section class="hero" id="hero" aria-label="精选作品轮播">
+      <div class="hero__slides" id="heroSlides"></div>
+      <div class="hero__shade"></div>
+
+      <div class="hero__content">
+        <p class="hero__kicker" id="heroKicker"></p>
+        <h1 class="hero__title" id="heroTitle"></h1>
+        <p class="hero__subtitle" id="heroSubtitle"></p>
+      </div>
+
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="上一张">&#8592;</button>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="下一张">&#8594;</button>
+
+      <div class="hero__dots" id="heroDots" role="tablist" aria-label="轮播导航"></div>
+
+      <a href="#works" class="scroll-cue" aria-label="向下浏览作品">
+        <span class="scroll-cue__line"></span>
+        <span class="scroll-cue__text">SCROLL</span>
+      </a>
+    </section>
+
+    <!-- ========== 作品区 ========== -->
+    <section class="works" id="works">
+      <div class="section-head reveal">
+        <p class="section-head__en">Selected Works</p>
+        <h2 class="section-head__title">作品精选</h2>
+        <p class="section-head__desc" id="worksIntro">光影之间，记录值得停留的瞬间</p>
+      </div>
+
+      <!-- 分类筛选 -->
+      <div class="filter reveal" id="filter" role="tablist" aria-label="作品分类筛选"></div>
+
+      <!-- 作品网格 -->
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- ========== 关于 ========== -->
+    <section class="about" id="about">
+      <div class="about__inner reveal">
+        <div class="about__left">
+          <p class="section-head__en">About</p>
+          <h2 class="about__title" id="aboutTitle">关于我</h2>
+          <p class="about__lead" id="aboutLead"></p>
+        </div>
+        <div class="about__right">
+          <div class="about__text" id="aboutText"></div>
+          <div class="about__stats">
+            <div class="stat"><span class="stat__num">04</span><span class="stat__label">题材领域</span></div>
+            <div class="stat"><span class="stat__num">20+</span><span class="stat__label">精选作品</span></div>
+            <div class="stat"><span class="stat__num">2026</span><span class="stat__label">持续创作</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 联系 / 页脚 ========== -->
+    <footer class="site-footer" id="contact">
+      <div class="footer__main">
+        <p class="footer__lead" id="footerLead"></p>
+        <a href="#" class="footer__email" id="footerEmail"></a>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__brand"><span id="footerMain">My</span><span class="brand__x" id="footerX">X</span></span>
+        <span class="footer__copy" id="footerCopy"></span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========== 灯箱 ========== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="作品大图浏览" aria-hidden="true">
+    <button class="lightbox__close" id="lbClose" aria-label="关闭">&times;</button>
+    <button class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" aria-label="上一张">&#8592;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lbImg" src="" alt="">
+      <figcaption class="lightbox__caption">
+        <span class="lightbox__title" id="lbTitle"></span>
+        <span class="lightbox__meta" id="lbMeta"></span>
+        <span class="lightbox__count" id="lbCount"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox__arrow lightbox__arrow--next" id="lbNext" aria-label="下一张">&#8594;</button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
